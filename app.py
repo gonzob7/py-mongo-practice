@@ -59,5 +59,15 @@ def create_user():
     <a href="/users">Back to Home</a>
     """
 
+@app.route('/delete_user_form')
+def delete_user_form():
+
+    return """
+    <form action='/delete' method='POST'>
+        Username: <input name='username' type='text'/>
+        <button type='submit'>Delete</button>
+    </form>
+    """
+
 if __name__ == '__main__':
     app.run(debug=True)
